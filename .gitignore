@@ -4,6 +4,10 @@
 *.dll
 *.so
 *.dylib
+__debug_bin
+
+# Fresh tmp
+tmp/
 
 # Test binary, built with `go test -c`
 *.test
@@ -12,4 +16,4 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
