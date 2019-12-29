@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+	"github.com/labstack/echo/v4"
 )
 
 func main() {
@@ -17,5 +18,7 @@ func main() {
 		utils.DebugLogging()
 	}
 
-	utils.Logger.Info("Hello, World!")
+	e := echo.New()
+	Router(e)
+	utils.Logger.Fatal(e.Start(":3000"))
 }
